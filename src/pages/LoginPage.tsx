@@ -45,7 +45,7 @@ const LoginPage: React.FC = () => {
       <main className="flex-grow flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl font-bold">Login</CardTitle>
+            <CardTitle className="text-2xl font-bold">Авторизироваться</CardTitle>
             <CardDescription>
               Enter your credentials to access your account
             </CardDescription>
@@ -54,7 +54,7 @@ const LoginPage: React.FC = () => {
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">E-mail</Label>
                 <Input
                   id="email"
                   type="email"
@@ -67,7 +67,7 @@ const LoginPage: React.FC = () => {
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">Пароль</Label>
                   <Link to="/forgot-password" className="text-sm text-accent hover:underline">
                     Forgot password?
                   </Link>
@@ -93,9 +93,9 @@ const LoginPage: React.FC = () => {
           
           <CardFooter>
             <p className="text-center text-sm text-muted-foreground w-full">
-              Don't have an account?{' '}
+              Нет аккаунта?{' '}
               <Link to="/register" className="text-accent hover:underline">
-                Sign up
+                Зарегистрироваться
               </Link>
             </p>
           </CardFooter>

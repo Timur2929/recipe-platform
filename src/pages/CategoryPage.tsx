@@ -23,7 +23,7 @@ const CategoryPage: React.FC = () => {
   
   const pageTitle = validCategory 
     ? `${validCategory.charAt(0).toUpperCase() + validCategory.slice(1)} Recipes`
-    : 'All Categories';
+    : 'Все категории';
   
   return (
     <div className="min-h-screen flex flex-col">

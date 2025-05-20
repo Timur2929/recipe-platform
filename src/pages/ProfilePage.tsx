@@ -51,20 +51,20 @@ const ProfilePage: React.FC = () => {
                     variant="outline" 
                     onClick={() => navigate('/my-recipes')}
                   >
-                    My Recipes
+                    Мои рецепты
                   </Button>
                   <Button 
                     variant="default"
                     onClick={() => navigate('/create')}
                   >
-                    Add New Recipe
+                    Добавить новый рецепт
                   </Button>
                 </div>
               </CardContent>
               
               <CardFooter className="flex justify-center border-t pt-6">
                 <Button variant="destructive" onClick={handleLogout}>
-                  Log Out
+                Выйти
                 </Button>
               </CardFooter>
             </Card>

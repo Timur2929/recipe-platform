@@ -11,13 +11,13 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-accent" />
-              <span className="font-bold text-xl">Recipe Exchange</span>
+              <span className="font-bold text-xl">Culinary magic</span>
             </Link>
-            <p className="text-muted-foreground">Share your culinary creations with the world. Discover, create, and enjoy amazing recipes.</p>
+            <p className="text-muted-foreground">Поделитесь своими кулинарными творениями со всем миром. Открывайте для себя, создавайте и наслаждайтесь удивительными рецептами.</p>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">Быстрые ссылки</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Categories</h3>
+            <h3 className="font-semibold text-lg mb-4">Категории</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/categories/breakfast" className="text-muted-foreground hover:text-foreground transition-colors">Breakfast</Link>
@@ -69,15 +69,15 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <div className="mt-4">
-              <p className="text-muted-foreground">Subscribe to our newsletter</p>
+              <p className="text-muted-foreground">Подпишитесь на нашу рассылку новостей</p>
               <div className="mt-2 flex">
                 <input 
                   type="email" 
-                  placeholder="Your email" 
+                  placeholder="Ваш E-mail" 
                   className="px-3 py-2 border rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-accent"
                 />
                 <button className="bg-accent text-accent-foreground px-4 py-2 rounded-r-md hover:bg-accent/90 transition-colors">
-                  Subscribe
+                  Подписаться
                 </button>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-6 border-t border-border">
           <p className="text-center text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Recipe Exchange. All rights reserved.
+            © {new Date().getFullYear()} Recipe Exchange. Все права защищены.
           </p>
         </div>
       </div>

@@ -39,8 +39,8 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2">
             <BookOpen className="h-6 w-6 text-accent" />
-            <span className="font-bold text-xl hidden md:inline">Recipe Exchange</span>
-            <span className="font-bold text-xl md:hidden">RE</span>
+            <span className="font-bold text-xl hidden md:inline">Culinary magic</span>
+            <span className="font-bold text-xl md:hidden">CM</span>
           </Link>
         </div>
 
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/categories">
-            <Button variant="ghost">Categories</Button>
+            <Button variant="ghost">Категории</Button>
           </Link>
           
           {isAuthenticated ? (
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
               <Link to="/create">
                 <Button variant="ghost" className="flex items-center gap-2">
                   <PlusCircle className="h-4 w-4" />
-                  <span>Add Recipe</span>
+                  <span>Добавить рецепт</span>
                 </Button>
               </Link>
               
@@ -83,15 +83,15 @@ const Navbar: React.FC = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuLabel>Мой аккаунт</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => navigate('/profile')}>
                     <User className="mr-2 h-4 w-4" />
-                    <span>Profile</span>
+                    <span>Профиль</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => navigate('/my-recipes')}>
                     <BookOpen className="mr-2 h-4 w-4" />
-                    <span>My Recipes</span>
+                    <span>Мои рецепты</span>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => {
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                     navigate('/');
                   }}>
                     <LogOut className="mr-2 h-4 w-4" />
-                    <span>Log out</span>
+                    <span>Выйти</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -107,10 +107,10 @@ const Navbar: React.FC = () => {
           ) : (
             <>
               <Link to="/login">
-                <Button variant="ghost">Login</Button>
+                <Button variant="ghost">Авторизироваться</Button>
               </Link>
               <Link to="/register">
-                <Button variant="default">Sign Up</Button>
+                <Button variant="default">Зарегистрироваться</Button>
               </Link>
             </>
           )}
@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
           <form onSubmit={handleSearch} className="flex relative">
             <Input
               type="search"
-              placeholder="Search recipes or ingredients"
+              placeholder="Искать рецепты или ингридиенты"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full"
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
           
           <div className="flex flex-col space-y-2">
             <Link to="/categories" onClick={toggleMenu}>
-              <Button variant="ghost" className="w-full justify-start">Categories</Button>
+              <Button variant="ghost" className="w-full justify-start">Категории</Button>
             </Link>
             
             {isAuthenticated ? (
@@ -148,19 +148,19 @@ const Navbar: React.FC = () => {
                 <Link to="/create" onClick={toggleMenu}>
                   <Button variant="ghost" className="w-full justify-start">
                     <PlusCircle className="h-4 w-4 mr-2" />
-                    <span>Add Recipe</span>
+                    <span>Добавить рецепт</span>
                   </Button>
                 </Link>
                 <Link to="/profile" onClick={toggleMenu}>
                   <Button variant="ghost" className="w-full justify-start">
                     <User className="h-4 w-4 mr-2" />
-                    <span>Profile</span>
+                    <span>Профиль</span>
                   </Button>
                 </Link>
                 <Link to="/my-recipes" onClick={toggleMenu}>
                   <Button variant="ghost" className="w-full justify-start">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    <span>My Recipes</span>
+                    <span>Мои рецепты</span>
                   </Button>
                 </Link>
                 <Button 
@@ -173,16 +173,16 @@ const Navbar: React.FC = () => {
                   }}
                 >
                   <LogOut className="h-4 w-4 mr-2" />
-                  <span>Log out</span>
+                  <span>Выйти</span>
                 </Button>
               </>
             ) : (
               <>
                 <Link to="/login" onClick={toggleMenu}>
-                  <Button variant="ghost" className="w-full justify-start">Login</Button>
+                  <Button variant="ghost" className="w-full justify-start">Авторизироваться</Button>
                 </Link>
                 <Link to="/register" onClick={toggleMenu}>
-                  <Button variant="default" className="w-full justify-start">Sign Up</Button>
+                  <Button variant="default" className="w-full justify-start">Зарегистрироваться</Button>
                 </Link>
               </>
             )}

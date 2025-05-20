@@ -13,7 +13,7 @@ interface CategoryFilterProps {
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory }) => {
   return (
     <div className="w-full my-6">
-      <h2 className="text-lg font-semibold mb-4">Categories</h2>
+      <h2 className="text-lg font-semibold mb-4">Категории</h2>
       <ScrollArea className="w-full whitespace-nowrap">
         <div className="flex space-x-2 p-1">
           <Link to="/categories">
@@ -21,7 +21,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory }) => 
               variant={!selectedCategory ? "default" : "outline"}
               className="rounded-full"
             >
-              All
+              Все
             </Button>
           </Link>
           

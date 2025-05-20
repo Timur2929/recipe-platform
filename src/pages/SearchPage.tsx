@@ -46,19 +46,19 @@ const SearchPage: React.FC = () => {
       
       <main className="flex-grow py-8">
         <div className="container px-4">
-          <h1 className="text-3xl font-bold mb-8">Search Recipes</h1>
+          <h1 className="text-3xl font-bold mb-8">Искать рецепты</h1>
           
           <form onSubmit={handleSearch} className="flex w-full max-w-lg mb-12 mx-auto">
             <Input
               type="search"
-              placeholder="Search by recipe name, ingredients, or description"
+              placeholder="Поиск по названию рецепта, ингредиентам или описанию"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full"
             />
             <Button type="submit" className="ml-2">
               <Search className="h-4 w-4 mr-2" />
-              Search
+              Искать
             </Button>
           </form>
           
@@ -69,7 +69,7 @@ const SearchPage: React.FC = () => {
               </h2>
               <RecipeGrid 
                 recipes={searchResults}
-                emptyMessage="No recipes match your search. Try different keywords."
+                emptyMessage="Ни один рецепт не соответствует вашему запросу. Попробуйте использовать другие ключевые слова."
               />
             </div>
           )}
@@ -77,10 +77,10 @@ const SearchPage: React.FC = () => {
           {!initialQuery && (
             <div className="text-center py-12">
               <p className="text-muted-foreground text-lg mb-2">
-                Enter a search term to find recipes
+              Введите поисковый запрос, чтобы найти рецепты
               </p>
               <p className="text-muted-foreground">
-                You can search by recipe name, ingredients, or description
+              Вы можете выполнять поиск по названию рецепта, ингредиентам или описанию
               </p>
             </div>
           )}

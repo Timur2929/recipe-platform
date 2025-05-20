@@ -193,37 +193,37 @@ const CreateRecipePage: React.FC = () => {
             className="mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back
+            Назад
           </Button>
           
-          <h1 className="text-3xl font-bold mb-8">Create New Recipe</h1>
+          <h1 className="text-3xl font-bold mb-8">Создать новый рецепт</h1>
           
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Basic Info Card */}
             <Card>
               <CardHeader>
-                <CardTitle>Basic Information</CardTitle>
-                <CardDescription>Add basic details about your recipe</CardDescription>
+                <CardTitle>Основная информация</CardTitle>
+                <CardDescription>Добавьте основные сведения о вашем рецепте</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="title">Recipe Title</Label>
+                  <Label htmlFor="title">Название рецепта</Label>
                   <Input
                     id="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="e.g., Chocolate Chip Cookies"
+                    placeholder="Пицца Деревенская"
                   />
                   {errors.title && <p className="text-destructive text-sm">{errors.title}</p>}
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="description">Description</Label>
+                  <Label htmlFor="description">Описание</Label>
                   <Textarea
                     id="description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Briefly describe your recipe"
+                    placeholder="Фантастическая классика, вкуснейшая пицца на вашем столе!"
                     rows={3}
                   />
                   {errors.description && <p className="text-destructive text-sm">{errors.description}</p>}
@@ -235,7 +235,7 @@ const CreateRecipePage: React.FC = () => {
                     id="image"
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
-                    placeholder="Enter a URL for your recipe image"
+                    placeholder="Введите URL-адрес изображения вашего рецепта"
                   />
                   {errors.image && <p className="text-destructive text-sm">{errors.image}</p>}
                   {image && (
@@ -254,7 +254,7 @@ const CreateRecipePage: React.FC = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="prepTime">Prep Time (minutes)</Label>
+                    <Label htmlFor="prepTime">Время подготовки (в минутах)</Label>
                     <Input
                       id="prepTime"
                       type="number"
@@ -266,7 +266,7 @@ const CreateRecipePage: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="cookTime">Cook Time (minutes)</Label>
+                    <Label htmlFor="cookTime">Время готовки (в минутах)</Label>
                     <Input
                       id="cookTime"
                       type="number"
@@ -278,7 +278,7 @@ const CreateRecipePage: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="servings">Servings</Label>
+                    <Label htmlFor="servings">Порции</Label>
                     <Input
                       id="servings"
                       type="number"
@@ -291,7 +291,7 @@ const CreateRecipePage: React.FC = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="difficulty">Difficulty</Label>
+                  <Label htmlFor="difficulty">Сложность</Label>
                   <Select
                     value={difficulty}
                     onValueChange={(value) => setDifficulty(value as 'easy' | 'medium' | 'hard')}
@@ -300,9 +300,9 @@ const CreateRecipePage: React.FC = () => {
                       <SelectValue placeholder="Select difficulty" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="easy">Easy</SelectItem>
-                      <SelectItem value="medium">Medium</SelectItem>
-                      <SelectItem value="hard">Hard</SelectItem>
+                      <SelectItem value="easy">Легко</SelectItem>
+                      <SelectItem value="medium">Средне</SelectItem>
+                      <SelectItem value="hard">Тяжело</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -312,8 +312,8 @@ const CreateRecipePage: React.FC = () => {
             {/* Categories Card */}
             <Card>
               <CardHeader>
-                <CardTitle>Categories</CardTitle>
-                <CardDescription>Select all categories that apply to your recipe</CardDescription>
+                <CardTitle>Категории</CardTitle>
+                <CardDescription>Выберите все категории, которые относятся к вашему рецепту</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
@@ -340,8 +340,8 @@ const CreateRecipePage: React.FC = () => {
             {/* Ingredients Card */}
             <Card>
               <CardHeader>
-                <CardTitle>Ingredients</CardTitle>
-                <CardDescription>List all ingredients needed for your recipe</CardDescription>
+                <CardTitle>Ингридиенты</CardTitle>
+                <CardDescription>Перечислите все ингредиенты, необходимые для вашего рецепта</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {ingredients.map((ingredient, index) => (
@@ -365,7 +365,7 @@ const CreateRecipePage: React.FC = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <Label htmlFor={`ingredient-${index}`}>Ingredient</Label>
+                      <Label htmlFor={`ingredient-${index}`}>Ингридиент</Label>
                       <Input
                         id={`ingredient-${index}`}
                         value={ingredient.name}
@@ -392,7 +392,7 @@ const CreateRecipePage: React.FC = () => {
                   className="w-full"
                 >
                   <Plus className="h-4 w-4 mr-2" />
-                  Add Ingredient
+                  Добавить ингридиент
                 </Button>
                 
                 {errors.ingredients && <p className="text-destructive text-sm">{errors.ingredients}</p>}
@@ -402,14 +402,14 @@ const CreateRecipePage: React.FC = () => {
             {/* Instructions Card */}
             <Card>
               <CardHeader>
-                <CardTitle>Instructions</CardTitle>
-                <CardDescription>Add step-by-step instructions for your recipe</CardDescription>
+                <CardTitle>Инструкция</CardTitle>
+                <CardDescription>Добавьте пошаговые инструкции к вашему рецепту</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 {steps.map((step, index) => (
                   <div key={index} className="space-y-2 p-4 border rounded-md">
                     <div className="flex items-center justify-between">
-                      <Label htmlFor={`step-${index}`}>Step {step.order}</Label>
+                      <Label htmlFor={`step-${index}`}>Шаг {step.order}</Label>
                       <Button
                         type="button"
                         variant="outline"
@@ -418,23 +418,23 @@ const CreateRecipePage: React.FC = () => {
                         disabled={steps.length === 1}
                       >
                         <Trash className="h-4 w-4 mr-2" />
-                        Remove
+                        Убрать
                       </Button>
                     </div>
                     <Textarea
                       id={`step-${index}`}
                       value={step.instruction}
                       onChange={(e) => handleStepChange(index, 'instruction', e.target.value)}
-                      placeholder={`Describe step ${step.order}`}
+                      placeholder={`Опишите шаг ${step.order}`}
                       rows={3}
                     />
                     <div className="space-y-2">
-                      <Label htmlFor={`step-image-${index}`}>Step Image URL (optional)</Label>
+                      <Label htmlFor={`step-image-${index}`}>Шаг Image URL (optional)</Label>
                       <Input
                         id={`step-image-${index}`}
                         value={step.image || ''}
                         onChange={(e) => handleStepChange(index, 'image', e.target.value)}
-                        placeholder="Add an image URL for this step (optional)"
+                        placeholder="Добавьте URL-адрес изображения для этого шага (необязательно)"
                       />
                     </div>
                   </div>
@@ -447,7 +447,7 @@ const CreateRecipePage: React.FC = () => {
                   className="w-full"
                 >
                   <Plus className="h-4 w-4 mr-2" />
-                  Add Step
+                  Добавить шаг
                 </Button>
                 
                 {errors.steps && <p className="text-destructive text-sm">{errors.steps}</p>}
@@ -457,7 +457,7 @@ const CreateRecipePage: React.FC = () => {
             {/* Submit */}
             <div className="flex justify-end">
               <Button type="submit" size="lg">
-                Create Recipe
+                Создать рецепт
               </Button>
             </div>
           </form>

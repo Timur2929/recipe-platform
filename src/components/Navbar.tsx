@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         <form onSubmit={handleSearch} className="hidden md:flex w-1/3 relative">
           <Input
             type="search"
-            placeholder="Search recipes or ingredients"
+            placeholder="Поиск рецептов или ингредиентов"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full"
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
           ) : (
             <>
               <Link to="/login">
-                <Button variant="ghost">Авторизироваться</Button>
+                <Button variant="ghost">Войти</Button>
               </Link>
               <Link to="/register">
                 <Button variant="default">Зарегистрироваться</Button>
@@ -179,7 +179,7 @@ const Navbar: React.FC = () => {
             ) : (
               <>
                 <Link to="/login" onClick={toggleMenu}>
-                  <Button variant="ghost" className="w-full justify-start">Авторизироваться</Button>
+                  <Button variant="ghost" className="w-full justify-start">Войти</Button>
                 </Link>
                 <Link to="/register" onClick={toggleMenu}>
                   <Button variant="default" className="w-full justify-start">Зарегистрироваться</Button>

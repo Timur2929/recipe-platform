@@ -45,9 +45,9 @@ const LoginPage: React.FC = () => {
       <main className="flex-grow flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl font-bold">Авторизироваться</CardTitle>
+            <CardTitle className="text-2xl font-bold">Войти</CardTitle>
             <CardDescription>
-              Enter your credentials to access your account
+            Введите свои учетные данные для доступа к вашей учетной записи.
             </CardDescription>
           </CardHeader>
           
@@ -69,7 +69,7 @@ const LoginPage: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password">Пароль</Label>
                   <Link to="/forgot-password" className="text-sm text-accent hover:underline">
-                    Forgot password?
+                    Забыли пароль?
                   </Link>
                 </div>
                 <Input

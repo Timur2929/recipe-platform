@@ -51,19 +51,19 @@ const RegisterPage: React.FC = () => {
       <main className="flex-grow flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl font-bold">Create an account</CardTitle>
+            <CardTitle className="text-2xl font-bold">Создать аккаунт</CardTitle>
             <CardDescription>
-              Enter your information to create an account
+            Введите свои данные для создания учетной записи
             </CardDescription>
           </CardHeader>
           
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="username">Username</Label>
+                <Label htmlFor="username">Имя пользователя</Label>
                 <Input
                   id="username"
-                  placeholder="johndoe"
+                  placeholder="Тимур Абдрашитов"
                   required
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -75,7 +75,7 @@ const RegisterPage: React.FC = () => {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="tatara@gmail.com"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -83,7 +83,7 @@ const RegisterPage: React.FC = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Пароль</Label>
                 <Input
                   id="password"
                   type="password"
@@ -94,7 +94,7 @@ const RegisterPage: React.FC = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                <Label htmlFor="confirmPassword">Подтвердите пароль</Label>
                 <Input
                   id="confirmPassword"
                   type="password"
@@ -116,9 +116,9 @@ const RegisterPage: React.FC = () => {
           
           <CardFooter>
             <p className="text-center text-sm text-muted-foreground w-full">
-              Already have an account?{' '}
+            У вас уже есть учетная запись?{' '}
               <Link to="/login" className="text-accent hover:underline">
-                Login
+                Войти
               </Link>
             </p>
           </CardFooter>

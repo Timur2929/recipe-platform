@@ -28,10 +28,10 @@ const LoginPage: React.FC = () => {
       if (success) {
         navigate('/');
       } else {
-        setError('Invalid email or password. Please try again.');
+        setError('Неверный адрес электронной почты или пароль. Пожалуйста, попробуйте снова.');
       }
     } catch (err) {
-      setError('An error occurred during login. Please try again.');
+      setError('При входе в систему произошла ошибка. Пожалуйста, попробуйте снова.');
       console.error(err);
     } finally {
       setIsLoading(false);

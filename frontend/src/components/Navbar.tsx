@@ -39,8 +39,8 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2">
             <BookOpen className="h-6 w-6 text-accent" />
-            <span className="font-bold text-xl hidden md:inline">Culinary magic</span>
-            <span className="font-bold text-xl md:hidden">CM</span>
+            <span className="font-bold text-xl hidden md:inline">Blinow</span>
+            <span className="font-bold text-xl md:hidden">BW</span>
           </Link>
         </div>
 

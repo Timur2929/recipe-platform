@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-accent" />
-              <span className="font-bold text-xl">Culinary magic</span>
+              <span className="font-bold text-xl">Blinow</span>
             </Link>
             <p className="text-muted-foreground">Поделитесь своими кулинарными творениями со всем миром. Открывайте для себя, создавайте и наслаждайтесь удивительными рецептами.</p>
           </div>

@@ -429,7 +429,7 @@ const CreateRecipePage: React.FC = () => {
                       rows={3}
                     />
                     <div className="space-y-2">
-                      <Label htmlFor={`step-image-${index}`}>Шаг Image URL (optional)</Label>
+                      <Label htmlFor={`step-image-${index}`}>Шаг Image URL (необязательно)</Label>
                       <Input
                         id={`step-image-${index}`}
                         value={step.image || ''}

@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 import { User } from '../types/recipe';
 import { currentUser, mockUsers } from '../data/mockData';
